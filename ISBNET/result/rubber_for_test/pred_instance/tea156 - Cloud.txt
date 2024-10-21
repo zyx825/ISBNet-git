@@ -1,0 +1,17 @@
+predicted_masks/tea156 - Cloud_000.txt 0 1.0000
+predicted_masks/tea156 - Cloud_001.txt 1 0.9506
+predicted_masks/tea156 - Cloud_002.txt 1 0.9481
+predicted_masks/tea156 - Cloud_008.txt 1 0.9257
+predicted_masks/tea156 - Cloud_009.txt 1 0.9253
+predicted_masks/tea156 - Cloud_011.txt 1 0.9138
+predicted_masks/tea156 - Cloud_012.txt 1 0.9089
+predicted_masks/tea156 - Cloud_014.txt 1 0.9065
+predicted_masks/tea156 - Cloud_015.txt 1 0.9059
+predicted_masks/tea156 - Cloud_016.txt 1 0.9029
+predicted_masks/tea156 - Cloud_017.txt 1 0.9017
+predicted_masks/tea156 - Cloud_019.txt 1 0.9009
+predicted_masks/tea156 - Cloud_021.txt 1 0.8995
+predicted_masks/tea156 - Cloud_022.txt 1 0.8986
+predicted_masks/tea156 - Cloud_025.txt 1 0.8953
+predicted_masks/tea156 - Cloud_027.txt 1 0.8927
+predicted_masks/tea156 - Cloud_031.txt 1 0.8845

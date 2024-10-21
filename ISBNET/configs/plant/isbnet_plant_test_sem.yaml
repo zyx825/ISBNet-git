@@ -1,0 +1,85 @@
+model:
+  channels: 16
+  num_blocks: 7
+  semantic_classes: 2
+  instance_classes: 2
+  sem2ins_classes: []
+  semantic_only: False
+  semantic_weight: [1.0, 1.0]
+  with_coords: False
+  ignore_label: -100
+  voxel_scale: 150  # 点坐标被放大以进行体素化，可以调节
+  use_spp_pool: False
+  filter_bg_thresh: 0.1
+  iterative_sampling: False
+  mask_dim_out: 8   # 与输出的实例数接近
+  instance_head_cfg:
+    dec_dim: 64
+    n_sample_pa1: 2048
+    n_queries: 256
+    radius_scale: 100
+    radius: 0.01
+    neighbor: 16
+  test_cfg:
+    x4_split: False
+    logit_thresh: 0.0
+    score_thresh: 0.2
+    npoint_thresh: 10
+    type_nms: 'matrix'
+    topk: 15
+
+  fixed_modules: ['input_conv', 'unet', 'output_layer', 'semantic_linear', 'offset_linear', 'offset_vertices_linear', 'box_conf_linear']
+
+data:
+  train:
+    type: 'plant'
+    data_root: 'dataset/plant'
+    prefix: 'tea_for_train_pth'
+    suffix: '.pth'
+    training: True
+    repeat: 3
+    voxel_cfg:
+      scale: 150
+      spatial_shape: [64, 1024]
+      max_npoint: 250000
+      min_npoint: 5000
+  test:
+    type: 'plant'
+    data_root: 'dataset/plant'
+    prefix: 'tea_for_test_pth'
+    suffix: '.pth'
+    training: False
+    voxel_cfg:
+      scale: 150
+      spatial_shape: [64, 1024]
+      max_npoint: 250000
+      min_npoint: 5000
+
+
+dataloader:
+  train:
+    batch_size: 16
+    num_workers: 16
+  test:
+    batch_size: 1
+    num_workers: 0
+
+optimizer:
+  type: 'AdamW'
+  lr: 0.001
+  weight_decay: 0.0001
+
+save_cfg:
+  semantic: True
+  offset: False
+  instance: False
+  offset_vertices: False
+  nmc_clusters: False
+  object_conditions: False
+
+fp16: True
+epochs: 200
+step_epoch: 20
+save_freq: 20
+pretrain: ''
+work_dir: ''

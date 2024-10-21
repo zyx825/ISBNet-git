@@ -1,0 +1,11 @@
+predicted_masks/tea164 - Cloud_000.txt 0 1.0000
+predicted_masks/tea164 - Cloud_001.txt 1 0.9556
+predicted_masks/tea164 - Cloud_003.txt 1 0.9400
+predicted_masks/tea164 - Cloud_004.txt 1 0.9399
+predicted_masks/tea164 - Cloud_005.txt 1 0.9383
+predicted_masks/tea164 - Cloud_008.txt 1 0.9331
+predicted_masks/tea164 - Cloud_009.txt 1 0.8515
+predicted_masks/tea164 - Cloud_011.txt 1 0.9235
+predicted_masks/tea164 - Cloud_012.txt 1 0.9213
+predicted_masks/tea164 - Cloud_022.txt 1 0.8984
+predicted_masks/tea164 - Cloud_028.txt 1 0.8583
